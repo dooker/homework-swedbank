@@ -1,0 +1,101 @@
+.teaser {
+    background: #FBF2EA;
+    height: 100%;
+}
+
+.teaser header {
+    margin: 0;
+    position: relative;
+}
+
+.teaser header h1 {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.teaser header.blue {
+    background: #5B8AD6;
+}
+
+.teaser header.yellow {
+    background: #F4BA44;
+}
+
+.teaser header.purple {
+    background: #C5569A;
+}
+
+.teaser header:after {
+    position: absolute;
+    content: "";
+    border-top: 15px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: 20px;
+    bottom: -15px;
+}
+
+.teaser header.blue:after {
+    border-top-color: #5B8AD6;
+}
+
+.teaser header.yellow:after {
+    border-top-color: #F4BA44;
+}
+
+.teaser header.purple:after {
+    border-top-color: #C5569A;
+}
+
+.teaser > div {
+    padding: 20px 25px 15px 10px;
+    color: #512B2B;
+    line-height: 18px;
+}
+
+.teaser > div > h2,
+.teaser > div > p {
+    margin: 10px 0;
+}
+
+.teaser > div ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.teaser > div ul li {
+    position: relative;
+    padding-left: 16px;
+}
+
+.teaser > div ul li:before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 8px;
+    top: 5px;
+    left: -2px;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.teaser header.blue + div li:before {
+    background: #5B8AD6;
+}
+
+.teaser header.yellow + div li:before {
+    background: #F4BA44;
+}
+
+.teaser header.purple + div li:before {
+    background: #C5569A;
+}
+
+@media screen and (min-width: 700px) {
+    .teaser > div {
+        padding: 30px 25px 30px 10px;
+    }
+}

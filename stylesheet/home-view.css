@@ -1,0 +1,61 @@
+.overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
+.overview h2 {
+    padding: 5px 10px 20px 5px;
+}
+
+.overview .actions {
+    display: flex;
+    justify-content: right;
+}
+
+.overview .actions button {
+    background: none;
+    border: none;
+    padding: 0 0 0 22px;
+    color: #31A3AE;
+    cursor: pointer;
+    position: relative;
+    line-height: 22px;
+}
+
+.overview .actions button document-icon {
+    position: relative;
+}
+
+.overview .actions button svg {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: -19px;
+    top: 0;
+    fill: #FFFFFF;
+}
+
+.overview .actions button:before {
+    position: absolute;
+    content: "";
+    background: #31A3AE;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    left: 0;
+}
+
+.overview .actions button + button {
+    margin-left: 10px;
+}
+
+.overview .table {
+    grid-column: 1 / 3;
+}
+
+@media screen and (min-width: 700px) {
+    .overview {
+        padding: 15px 30px 35px 10px;
+    }
+}

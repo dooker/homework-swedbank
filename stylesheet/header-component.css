@@ -1,0 +1,65 @@
+header-component .gradient {
+    height: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+.logo button {
+    margin-left: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+}
+
+.logo button span {
+    width: 18px;
+    height: 3px;
+    background: #512B2B;
+    display: block;
+    pointer-events: none;
+}
+
+.logo button.open span {
+    display: none;
+}
+
+.logo button.open:before,
+.logo button.open:after {
+    margin-top: -10px;
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 3px;
+    background-color: #512B2B;
+}
+
+.logo button.open:before {
+    transform: rotate(45deg);
+}
+
+.logo button.open:after {
+    transform: rotate(-45deg);
+}
+
+.logo button span + span {
+    margin-top: 3px;
+}
+
+@media screen and (min-width: 700px) {
+    .logo button {
+        display: none;
+    }
+}

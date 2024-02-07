@@ -1,0 +1,45 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    background: #EBF8F2;
+    justify-content: center;
+    padding: 10px;
+    color: #512B2B;
+}
+
+.banner h1 {
+    padding: 20px 0 0;
+}
+
+.banner button.button {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    .banner {
+        flex-direction: row;
+        padding: 18px;
+    }
+
+    .banner .content {
+        padding-left: 20px;
+    }
+
+    .banner h1 {
+        padding: 40px 0 0;
+    }
+
+    .banner .actions {
+        display: flex;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .banner button-component {
+        margin-left: auto;
+    }
+
+    .banner button.button {
+        margin-top: 0;
+    }
+}

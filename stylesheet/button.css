@@ -1,0 +1,19 @@
+button.button {
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.button.orange {
+    background: #EE7023
+}
+
+@media screen and (min-width: 700px) {
+    button.button {
+        width: auto;
+    }
+}

@@ -1,0 +1,39 @@
+main {
+    background: #FBF2EA;
+    padding: 10px;
+}
+
+.limited-width {
+    max-width: 1535px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main h1 {
+    padding-left: 10px;
+}
+
+content-component > * {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+}
+
+section.general {
+    background: white;
+    border-radius: 3px;
+    padding: 10px;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    section.general {
+        padding: 20px;
+    }
+
+    content-component section.list-of-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+body.hover:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #512B2BBE;
+    z-index: 1;
+}
+
+.gradient {
+    background-image: linear-gradient(to right, #fa7f25, #fdbe13);
+    height: 4px;
+}
+
+h1,
+.as-h1 {
+    color: #EE7023;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0;
+}
+
+h2,
+.as-h2 {
+    font-size: 16px;
+    margin: 0;
+    color: #512B2B;
+}
+
+.show-on-desktop {
+    display: none;
+}
+
+a {
+    color: #31A3AE;
+    text-decoration: none;
+    position: relative;
+}
+
+a:not([href^="tel:"]):not([href^="mailto:"]):not(.social-media a) {
+    padding-left: 10px;
+}
+
+a:not([href^="tel:"]):not([href^="mailto:"]):not(.social-media a):before {
+    position: absolute;
+    content: "";
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #31A3AE;
+    left: 0;
+    top: 2px;
+}
+
+@media screen and (min-width: 700px) {
+    .show-on-desktop {
+        display: block;
+    }
+}

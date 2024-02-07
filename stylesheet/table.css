@@ -1,0 +1,44 @@
+.table > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: #512B2B;
+}
+
+.table > div > div {
+    padding: 10px;
+}
+
+.table > div > div:not(:first-child) {
+    text-align: right;
+}
+
+.table .header {
+    background: #E9F7FB;
+}
+
+.table .total {
+    font-weight: bold;
+}
+
+.table .total > div {
+    padding: 15px 10px;
+    line-height: 20px;
+}
+
+.table .total > div:last-child {
+    font-size: 20px;
+}
+
+.table > div:not(.header):not(.total) {
+    border-bottom: 1px solid #F4F2F0;
+}
+
+.table a {
+    color: #31A3AE;
+}
+
+@media screen and (min-width: 700px) {
+    .table > div {
+        grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+    }
+}
