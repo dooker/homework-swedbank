@@ -10,7 +10,7 @@ class PaymentView extends HTMLElement {
             </style>
 
             <div class="fields" data-form="payment" data-form-validate>
-                <div class="field select">
+                <div class="field">
                     <label for="account">Account</label>
                     <div class="select">
                         <select id="account" name="account">
@@ -61,7 +61,7 @@ class PaymentView extends HTMLElement {
             </div>
         `;
 
-        this.querySelectorAll("button-component button.button").forEach(button => {
+        this.querySelectorAll("payment-view button-component button.button").forEach(button => {
             button.addEventListener("click", (event) => this.handleClick(event));
         })
     }
@@ -85,7 +85,7 @@ class PaymentView extends HTMLElement {
 
     disconnectedCallback() {
         this.querySelectorAll("button-component button.button").forEach(button => {
-            button.removeEventListener("click", () => this.handleClick());
+            button.removeEventListener("click", (event) => this.handleClick(event));
         })
     }
 }
