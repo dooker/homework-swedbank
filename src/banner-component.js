@@ -19,7 +19,7 @@ class BannerComponent extends HTMLElement {
                     <div class="actions">
                         <a href="#">Read more</a>
                         
-                        <button-component text="Go" callback="${this.callback}"></button-component>
+                        <button-component text="Go"></button-component>
                     </div>
                 </div>
             </section>

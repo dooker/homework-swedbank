@@ -12,8 +12,25 @@ button.button.orange {
     background: #EE7023
 }
 
+button.button.turquoise {
+    background: #31A3AE;
+}
+
+button-component {
+    display: block;
+}
+
+button-component + button-component {
+    padding-top: 8px;
+}
+
 @media screen and (min-width: 700px) {
-    button.button {
-        width: auto;
+    button-component {
+        display: inline-block;
+    }
+
+    button-component + button-component {
+        padding-top: 0;
+        padding-left: 8px;
     }
 }

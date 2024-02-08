@@ -31,8 +31,6 @@ class HeaderComponent extends HTMLElement {
     handleClick = ({target}) => {
         target.classList.toggle("open")
         target.parentElement.parentElement.querySelector("header-navigation").classList.toggle("open")
-
-        document.querySelector("body").classList.toggle("hover")
     }
 
     disconnectedCallback() {

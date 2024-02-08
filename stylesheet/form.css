@@ -1,0 +1,102 @@
+.fields {
+    padding-top: 10px;
+}
+
+.field + .field {
+    padding-top: 10px;
+}
+
+.field input + .select {
+    margin-top: 10px;
+}
+
+.fields + .actions {
+    padding-top: 24px;
+    padding-bottom: 10px;
+}
+
+.field label,
+.field input,
+.field select {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.field label {
+    padding-bottom: 8px;
+}
+
+.field input,
+.field select {
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #BCD8DB;
+    border-radius: 3px;
+    padding: 0 8px;
+}
+
+.field input.error,
+.field select.error {
+    border-color: #C5131C;
+}
+
+.field select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #EBF8F2;
+}
+
+.field .select {
+    position: relative;
+}
+
+.field .select:before,
+.field .select:after {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    content: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+}
+
+.field .select:before {
+    top: 5px;
+    transform: rotate(180deg);
+}
+
+div.error {
+    color: #C5131C;
+    padding: 2px 10px;
+}
+
+@media screen and (min-width: 700px) {
+    .field label {
+        width: auto;
+        padding: 10px 10px 0 0;
+    }
+
+    .field input,
+    .field select {
+        width: 300px;
+    }
+
+    .fields .field {
+        max-width: 815px;
+        display: flex;
+        justify-content: right;
+    }
+
+    .field.dual input {
+        width: 190px;
+    }
+
+    .field.dual select {
+        width: 100px;
+    }
+
+    .field .input + .select {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+}

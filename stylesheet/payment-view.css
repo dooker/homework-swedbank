@@ -1,0 +1,19 @@
+payment-view .field.description {
+    padding-top: 24px;
+}
+
+@media screen and (min-width: 700px) {
+    payment-view {
+        display: flex;
+        flex-direction: column;
+    }
+
+    payment-view .actions {
+        display: flex;
+        justify-content: right;
+    }
+
+    payment-view .field.description {
+        padding-top: 10px;
+    }
+}
