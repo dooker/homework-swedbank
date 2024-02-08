@@ -2,7 +2,7 @@ import "./payment-view.js"
 import "./calculator-view.js"
 
 class WalletComponent extends HTMLElement {
-    default = "calculator"
+    default = "payment"
 
     mapper = {
         "payment": `<payment-view></payment-view>`,

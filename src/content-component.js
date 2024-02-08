@@ -2,7 +2,7 @@ import "./home-view.js"
 import "./wallet-view.js"
 
 class ContentComponent extends HTMLElement {
-    default = "wallet"
+    default = "home"
 
     mapper = {
         "home": `<home-view></home-view>`,

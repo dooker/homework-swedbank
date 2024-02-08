@@ -12,6 +12,29 @@ class CalculatorView extends HTMLElement {
     periodSelector = "#period"
     interestSelector = "#interest"
     paymentSelector = "data-payment"
+    periodList = [
+        {
+            value: 1,
+            text: "1 year"
+        },
+        {
+            value: 5,
+            text: "5 years"
+        },
+        {
+            value: 10,
+            text: "10 years"
+        },
+        {
+            value: 20,
+            text: "20 years"
+        },
+        {
+            value: 30,
+            text: "30 years"
+        }
+    ]
+    interestList = [3.5, 4.0, 4.5, 5.0, 5.5]
 
     connectedCallback() {
         this.innerHTML = `
@@ -42,10 +65,7 @@ class CalculatorView extends HTMLElement {
                     <label for="period">Period</label>
                     <div class="select">
                         <select id="period" name="period">
-                            <option value="1">1 year</option>
-                            <option value="5">5 years</option>
-                            <option value="10">10 years</option>
-                            <option value="30">30 years</option>
+                            ${this.periodList.map(option => `<option value="${option.value}">${option.text}</option>`)}
                         </select>
                     </div>
                 </div>
@@ -54,9 +74,7 @@ class CalculatorView extends HTMLElement {
                     <label for="interest">Interest</label>
                     <div class="select">
                         <select id="interest" name="interest">
-                            <option value="3.5">3.5 %</option>
-                            <option value="4.5">4.5 %</option>
-                            <option value="5.5">5.5 %</option>
+                            ${this.interestList.map(option => `<option value="${option}">${option.toFixed(1)} %</option>`)}
                         </select>
                     </div>
                 </div>
